@@ -1,0 +1,28 @@
+# Data processing and ETL
+pandas==2.1.4
+numpy==1.24.3
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+
+# API and data sources
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Database
+# sqlite3
+
+# Data validation and quality
+great-expectations==0.17.23
+
+# Scheduling and orchestration
+schedule==1.2.0
+
+# Logging and monitoring
+loguru==0.7.2
+
+# Configuration management
+pyyaml==6.0.1
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0 

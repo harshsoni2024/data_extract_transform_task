@@ -1,0 +1,44 @@
+# Database Configuration
+database:
+  type: "sqlite"  # Can be changed to postgresql, mysql, etc.
+  host: "localhost"
+  port: 5432
+  database: "data_warehouse"
+  username: "admin"
+  password: "password"
+
+# Data Sources Configuration
+data_sources:
+  api:
+    base_url: "https://jsonplaceholder.typicode.com"
+    endpoints:
+      users: "/users"
+      posts: "/posts"
+      comments: "/comments"
+  
+  csv_files:
+    customers: "data/raw/customers.csv"
+    products: "data/raw/products.csv"
+    orders: "data/raw/orders.csv"
+
+# ETL Configuration
+etl:
+  batch_size: 1000
+  max_retries: 3
+  retry_delay: 5
+  
+# SCD Configuration
+scd:
+  type_2:
+    enabled: true
+    effective_date_column: "effective_date"
+    end_date_column: "end_date"
+    current_flag_column: "is_current"
+    version_column: "version"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/data_warehouse.log"
+  max_size: "10MB"
+  rotation: "1 day" 
